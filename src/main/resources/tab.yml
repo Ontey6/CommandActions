@@ -1,0 +1,5 @@
+type: blacklist
+
+tab: []
+
+remove-namespaced-commands: false

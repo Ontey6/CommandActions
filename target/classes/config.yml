@@ -1,0 +1,6 @@
+format:
+  plugin-prefix: '[CmdActions]'
+
+# The listeners that are turned on and off
+listeners:
+  tab: false
