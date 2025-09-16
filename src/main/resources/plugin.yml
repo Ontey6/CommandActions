@@ -4,3 +4,7 @@ main: com.ontey.Main
 description: 'add action to your server!'
 api-version: '1.20.5'
 authors: [ Ontey ]
+
+permissions:
+  commandactions.tab-all:
+    default: false

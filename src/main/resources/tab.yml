@@ -1,5 +1,27 @@
-type: blacklist
+groups:
+  example:
+    # technically, all keys in here are optional.
+    # optional. default is the section name, here 'default'
+    #name: 'def'
+    type: blacklist
+    list: []
+    remove-namespaced: false # boolean
+    removed-namespaces: [] # Field
+    # If true, everybody's tab is modified that way and the permission is used to bypass the filter
+    # If false, players need the permission to get the tab filter
+    default: false
+    # replaces <group> with the group name
+    permission: commandactions.tab.bypass.<group>
 
-tab: []
+  player:
+    type: blacklist
+    list:
+      - pl
+      - plugins
+    remove-namespaced: true
+    default: true
+    permission: tab.bypass.player
 
-remove-namespaced-commands: false
+# permissions:
+# commandactions.tab.<group>
+# commandactions.tab-all
