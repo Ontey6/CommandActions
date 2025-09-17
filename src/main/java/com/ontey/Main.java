@@ -29,7 +29,8 @@ public final class Main extends JavaPlugin {
    }
    
    private void loadEvents() {
-      pm.registerEvents(new TabListener(), this);
+      if(Config.isListenerActive("tab"))
+         pm.registerEvents(new TabListener(), this);
    }
    
    public static void disablePlugin() {
