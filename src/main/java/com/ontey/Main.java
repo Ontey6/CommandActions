@@ -3,6 +3,7 @@ package com.ontey;
 import com.ontey.files.Config;
 import com.ontey.files.TabFile;
 import com.ontey.listener.TabListener;
+import com.ontey.updater.Updater;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,6 +21,7 @@ public final class Main extends JavaPlugin {
       pm = getServer().getPluginManager();
       
       load();
+      Updater.checkForUpdates();
    }
    
    private void load() {

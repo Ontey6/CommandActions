@@ -1,8 +1,9 @@
 groups:
+  # group only has the default values
   example:
     # technically, all keys in here are optional.
     # optional. default is the section name, here 'default'
-    #name: 'def'
+    name: 'def'
     type: blacklist
     list: []
     remove-namespaced: false # boolean
@@ -11,17 +12,38 @@ groups:
     # If false, players need the permission to get the tab filter
     default: false
     # replaces <group> with the group name
-    permission: commandactions.tab.bypass.<group>
+    permission: commandactions.tab.<group>
 
   player:
     type: blacklist
+    # NOTE: the commands in the list are just NOT VISIBLE
+    # They can be executed just fine!
     list:
       - pl
       - plugins
+      - icanhasbukkit
+      - callback
+      # luckperms commands
+      - lp
+      - luckperms
+      - perm
+      - perms
+      - permission
+      - permissions
     remove-namespaced: true
     default: true
     permission: tab.bypass.player
 
+  debloated:
+    remove-namespaced: true
+    default: false
+    permission: tab.debloated
+
 # permissions:
+
+# default permission:
 # commandactions.tab.<group>
+
+# permission to bypass all tab restrictions
+# NOBODY (not even OP's) have this without manually setting it
 # commandactions.tab-all
